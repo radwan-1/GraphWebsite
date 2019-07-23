@@ -24,8 +24,8 @@
 
 	//create accelaration table --------------------------------------------------
 	$sql = "CREATE TABLE IF NOT EXISTS `datasets` (
-	  `data1` VARCHAR(50) NOT NULL,
-	  `data2` VARCHAR(50) NOT NULL,
+	  `oldYearData` VARCHAR(50) NOT NULL,
+	  `newYearData` VARCHAR(50) NOT NULL,
 	  `ID` INT NOT NULL AUTO_INCREMENT,
 	  PRIMARY KEY (`ID`))";
 
@@ -35,7 +35,7 @@
 	    echo "Error creating accelaration table: " . mysqli_error($conn). "<br>";
 	}
 			
-	$query = "INSERT INTO datasets (data1, data2) VALUES
+	$query = "INSERT INTO datasets (oldYearData, newYearData) VALUES
 	('1', '2'), ('4', '5') ,('3', '5'),('6', '7'),('2', '4'),('0', '3'),('3', '2')";
 	
 	$conn->query($query);
